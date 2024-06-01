@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["title"] - crud</title>
+    <link rel="stylesheet" href="~/css/pico.min.css" asp-append-version="true" />
+
+
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><strong>TODO</strong></li>
+            </ul>
+            <ul>
+                <li><a asp-action="Index" asp-controller="Home"> Lista</a></li>
+                <li><a asp-action="Add" asp-controller="Home">Dodaj</a></li>
+                <li><a asp-action="Logout" asp-controller="Auth">Wyloguj</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+    <main role="main">
+
+        <div class="container">
+            @RenderBody()
+    </div>
+    </main>
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("scripts", required: false)
+</body>
+</html>

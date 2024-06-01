@@ -1,0 +1,9 @@
+﻿@model crud.Models.Todo
+
+<h2>Dodawanie</h2>
+<form method="post">
+	<label asp-for="Title">Tytuł</label>
+	<input type="text" placeholder="Tu daj tytuł" asp-for="Title"/>
+	<span asp-validation-for="Title"></span>
+	<button type="submit">Wyślij</button>
+</form>
